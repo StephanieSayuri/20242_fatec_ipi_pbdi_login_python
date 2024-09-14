@@ -26,10 +26,28 @@ def existe(usuario):
   # devolver true ou false, conforme o resultado
   return result != None
 
+def menu():
+  texto = "0-Fechar\n1-Login\n2-Logoff\n"
+  usuario = None
+  op = int(input(texto))
+  while op!= 0:
+    if op == 1:
+      login = input("Digite seu login\n")
+      senha = input("Digite sua senha\n")
+      usuario = Usuario(login, senha)
+      print("Usuário OK!" if existe(usuario) else "Usuário NOK!")
+    elif op == 2:
+      usuario = None
+      print("Logoff realizado com sucesso")
+    op = int(input(texto))
+  else:
+    print("Até mais")
+
 def main():
-  login = "admin"
-  senha = "admin"
-  usuario = Usuario(login, senha)
-  print("Existe" if existe(usuario) else "Não existe")
+  # login = "admin"
+  # senha = "admin"
+  # usuario = Usuario(login, senha)
+  # print("Existe" if existe(usuario) else "Não existe")
+  menu()
 
 main()
