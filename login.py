@@ -25,3 +25,11 @@ def existe(usuario):
 
   # devolver true ou false, conforme o resultado
   return result != None
+
+def main():
+  login = "admin"
+  senha = "admin"
+  usuario = Usuario(login, senha)
+  print("Existe" if existe(usuario) else "Não existe")
+
+main()
