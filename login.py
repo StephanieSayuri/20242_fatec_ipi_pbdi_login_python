@@ -8,7 +8,7 @@ class Usuario:
 def existe(usuario):
   # abrir uma conexão com o postgresql
   with psycopg.connect(
-    host = "docker-db-1",
+    host = "localhost",
     dbname = "pbdi",
     user = "postgres",
     password = "123456"
